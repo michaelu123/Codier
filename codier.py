@@ -1,5 +1,19 @@
 from pyexcel_ods3 import get_data, save_data
-import json
+
+# these imports seem to be necessary for pyinstall
+import pyexcel
+import pyexcel.plugins.parsers
+import pyexcel.plugins.sources
+import pyexcel.plugins.renderers
+import pyexcel_io
+import pyexcel_io.readers
+import pyexcel_io.writers
+import pyexcel_io.database
+import pyexcel_ods3
+import pyexcel_ods3.odsr
+import pyexcel_ods3.odsw
+
+#import json
 
 def importods(inp, outp):
     data = get_data(inp, encoding="utf-8")
